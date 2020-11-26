@@ -1,0 +1,19 @@
+@import './../../styles/variables';
+
+.meli-breadcrumb{
+    display:flex;
+    margin:$spacing-16 0px;
+    padding:0px;
+}
+.meli-breadcrumb li{
+    list-style-type: none;
+    margin-right:10px;
+    color:$meli-gray;
+    font-size:14px;
+}
+
+.arrow-breadcrumb{ 
+    font-weight:lighter;
+    position: relative;
+    left: 3px;
+}

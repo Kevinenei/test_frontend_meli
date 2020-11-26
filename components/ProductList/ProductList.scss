@@ -1,0 +1,67 @@
+@import './../../styles/variables';
+
+.ui-search-productlist{
+    display:flex;
+    padding:$spacing-16 0px;
+    padding:0px;
+    background:$meli-white;
+    flex-wrap:wrap;
+}
+.ui-search-result__content-wrapper{
+    width:40%;
+    @include tablet {
+        width:60%;
+    }
+}
+.ui-price{
+    font-size:24px;
+    margin-top:$spacing-32;
+    color:$meli-dark-gray;
+
+    @include tablet {
+        margin:$spacing-32 0px;
+    }
+
+    span{
+        margin-right:5px;
+    }
+    span:last-of-type{
+        margin-right:10px;
+    }
+}
+
+.ui-thumbnail{ 
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin:$spacing-16;
+    width:80%;
+    max-width:120px;
+    display:block;
+    cursor: pointer;
+    @include tablet {
+        width:100%;
+        min-width:180px;
+        min-height:180px;
+    }
+}
+
+.ui-search-title{
+    font-size:16px;
+    @include tablet {
+        font-size:18px;
+    }
+    font-weight:normal;
+    color:$meli-dark-gray;
+}
+
+.ui-search-state-name{
+    display: none;
+    @include tablet {
+        margin-top:$spacing-32;
+        display: block;
+
+    }
+    color:$meli-gray;
+}
+

@@ -1,3 +1,35 @@
+@import './variables';
+
+html,body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body{
+  background:$meli-light-gray;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.standarwrap {
+  max-width: 1200px;
+  margin:0 auto;
+  padding:8px;
+  @include tablet {
+    padding:0px;
+  }
+}
+
+/*
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -120,3 +152,4 @@
     flex-direction: column;
   }
 }
+*/

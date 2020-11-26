@@ -1,0 +1,22 @@
+@import './../../styles/variables';
+
+$heightbar:60px;
+header {
+    height: $heightbar;
+    width: 100%;
+    position: relative;
+    background-color: $meli-yellow;
+}
+.headerwrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:$heightbar;
+    padding:0px $spacing-8;
+    @include tablet {
+        padding:0px;
+    }
+}
+.nav-logo{
+    margin-top:80px;
+}
