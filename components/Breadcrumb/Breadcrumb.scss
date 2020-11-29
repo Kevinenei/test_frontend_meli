@@ -2,13 +2,14 @@
 
 .meli-breadcrumb{
     display:flex;
+    flex-wrap:wrap;
     margin:$spacing-16 0px;
     padding:0px;
+    color:$meli-gray;
 }
 .meli-breadcrumb li{
     list-style-type: none;
     margin-right:10px;
-    color:$meli-gray;
     font-size:14px;
 }
 
@@ -16,4 +17,5 @@
     font-weight:lighter;
     position: relative;
     left: 3px;
+    color:$meli-gray;
 }

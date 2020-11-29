@@ -1,26 +1,23 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 import './SearchInputs.scss'
 import Context from "./../../store/context";
 import { useRouter } from 'next/router'
 
-const SearchInputs = props => {
+const SearchInputs = () => {
   const router = useRouter()
   const { state, actions } = useContext(Context);
-  const [searchword, setSearchWord] = useState("");
-  useEffect(function () {
-    console.log(state);
-  }, []);
 
   const writeWord = (product) => {
-    setSearchWord(product);
+    actions({ type: 'setState', payload: { ...state, search: product } });
   }
 
   const handleKeypress = e => {
     if (e.charCode === 13) {
+      actions({ type: 'setState', payload: { ...state, search: state.search } });
       e.preventDefault()
-      router.push('/items?search=' + searchword);
+      router.push(state.search.length ? '/items?search=' + state.search : '/');
     }
   };
 
@@ -34,8 +31,9 @@ const SearchInputs = props => {
         placeholder="Nunca dejes de buscar"
         onChange={(e) => writeWord(e.target.value)}
         onKeyPress={handleKeypress}
+        value={state.search}
       />
-      <Link href={'/items?search=' + searchword}><button className="search__button" >
+      <Link href={state.search.length ? '/items?search=' + state.search : '/'}><button className="search__button" >
         <Image
           src="/ic_Search.png"
           alt="Mercado Libre Logo"

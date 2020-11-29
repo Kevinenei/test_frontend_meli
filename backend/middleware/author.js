@@ -1,9 +1,9 @@
 const authorMiddleware = (req, res, next) => {
-    res.author = {
-      name: 'Kevin',
-      lastname: 'Enei'
-    };
-    next();
+  res.author = {
+    name: 'Kevin',
+    lastname: 'Enei'
   };
-  
-  module.exports = authorMiddleware;
+  next();
+};
+
+module.exports = authorMiddleware;

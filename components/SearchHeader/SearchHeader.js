@@ -4,20 +4,20 @@ import Link from 'next/link'
 import SearchInputs from './../SearchInputs';
 import './SearchHeader.scss'
 
-const SearchHeader = props => {
+const SearchHeader = () => {
   return (
     <>
       <header>
         <div className="standarwrap headerwrap">
           <Link href='/'>
             <a>
-            <Image
-              src="/Logo_ML.png"
-              alt="Mercado Libre Logo"
-              width={53}
-              height={36}
-              className="nav-logo"
-            />
+              <Image
+                src="/Logo_ML.png"
+                alt="Mercado Libre Logo"
+                width={53}
+                height={36}
+                className="nav-logo"
+              />
             </a>
           </Link>
           <SearchInputs></SearchInputs>

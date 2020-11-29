@@ -1,7 +1,7 @@
 import { useState } from 'react';
 const useGlobalStore = () => {
     const [state, setState] = useState({
-        search: "as",
+        search: "",
     });
 
     const actions = (action) => {

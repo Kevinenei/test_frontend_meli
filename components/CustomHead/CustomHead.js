@@ -17,14 +17,14 @@ const CustomHead = props => {
   );
 };
 
-CustomHead.defaultProps = {    
+CustomHead.defaultProps = {
   title: "Kevin Enei - Test Práctico - Frontend MELI",
-  description:"Desarrollo en React con Next js y Node para Mercado Pago en Meli"
+  description: "Desarrollo en React con Next js y Node para Mercado Pago en Meli"
 }
 
 CustomHead.propTypes = {
-  title:PropTypes.string,
-  description:PropTypes.string
+  title: PropTypes.string,
+  description: PropTypes.string
 }
 
 export default CustomHead;
