@@ -24,7 +24,7 @@ const SearchInputs = () => {
 
 
   return (
-    <div className="search">
+    <form className="search">
       <input
         type="text"
         className="search_input"
@@ -32,6 +32,13 @@ const SearchInputs = () => {
         onChange={(e) => writeWord(e.target.value)}
         onKeyPress={handleKeypress}
         value={state.search}
+        aria-label="Ingresá lo que quieras encontrar"
+        placeholder="Buscar productos, marcas y más…"
+        maxLength="120"
+        autoCapitalize="none"
+        autoCorrect="off"
+        spellCheck="false"
+        autoComplete="off"
       />
       <Link href={state.search.length ? '/items?search=' + state.search : '/'}><button className="search__button" >
         <Image
@@ -41,7 +48,7 @@ const SearchInputs = () => {
           height={18}
         />
       </button></Link>
-    </div>
+    </form>
   );
 };
 

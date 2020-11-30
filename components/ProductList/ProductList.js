@@ -6,7 +6,7 @@ import { priceFormat } from '../../utils/index';
 
 const ProductList = props => {
   return (
-    <div className="ui-search-productlist">
+    <div className="ui-search-productlist" aria-label={props.title}>
       <Link href={'/items/' + props.id} >
         <img
           src={props.thumbnail}

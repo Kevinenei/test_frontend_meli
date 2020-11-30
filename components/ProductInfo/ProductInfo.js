@@ -8,7 +8,7 @@ const ProductInfo = props => {
   return (
     <>
       <div className="ui-productinfo-img-title">
-        <div className="ui-productinfo-img-wrap">
+        <div className="ui-productinfo-img-wrap" aria-label={props.title}>
           <img
             src={props.picture_url}
             alt={props.title}

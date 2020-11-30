@@ -10,7 +10,7 @@ const SearchHeader = () => {
       <header>
         <div className="standarwrap headerwrap">
           <Link href='/'>
-            <a>
+            <a aria-label="Ir al contenido principal">
               <Image
                 src="/Logo_ML.png"
                 alt="Mercado Libre Logo"

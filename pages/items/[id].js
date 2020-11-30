@@ -29,9 +29,11 @@ const ProductPage = props => {
 
   return (
     <div className="container">
-      {item.id !== undefined &&
+      {item.id !== undefined ?
         //Params For SEO
         <CustomHead title={item.title} description={item.description.substring(0, 160)}></CustomHead>
+        :
+        <CustomHead></CustomHead>
       }
       <SearchHeader></SearchHeader>
       {item.title !== undefined &&

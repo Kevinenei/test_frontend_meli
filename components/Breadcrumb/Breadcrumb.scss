@@ -5,7 +5,10 @@
     flex-wrap:wrap;
     margin:$spacing-16 0px;
     padding:0px;
-    color:$meli-gray;
+    color:$meli-dark-gray;
+    @include tablet {
+        color:$meli-gray;
+    }
 }
 .meli-breadcrumb li{
     list-style-type: none;
@@ -17,5 +20,8 @@
     font-weight:lighter;
     position: relative;
     left: 3px;
-    color:$meli-gray;
+    color:$meli-dark-gray;
+    @include tablet {
+        color:$meli-gray;
+    }
 }
